@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 25, 2024, 1:03:19 PM
+    Author     : manhc
+*/
+
+#listAccount {
+    margin-top: 30px;
+}
+
+#addAccount {
+    margin-top: 30px;
+}
+
+.btn-transparent {
+    background-color: #ffffff;
+    color: inherit;
+    border: 1px solid #000000;
+    transition: transform 0.2s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.btn-transparent:hover {
+    border-color: currentColor; /* Giữ viền khi trỏ chuột vào */
+}
+
+.btn-transparent:active {
+    transform: scale(0.90); /* Thu nhỏ nút khi được nhấn */
+}
+
+.form-check-input[type="radio"]:checked {
+    /* Màu của radio button khi được chọn */
+    background-color: #cccccc; /* Màu xanh của Bootstrap */
+    border-color: #00ffff; /* Màu xanh của Bootstrap */
+}
+
+.form-check-input[type="checkbox"]:checked {
+    /* Màu của radio button khi được chọn */
+    background-color: #cccccc; /* Màu xanh của Bootstrap */
+    border-color: #00ffff; /* Màu xanh của Bootstrap */
+}
+
+
+

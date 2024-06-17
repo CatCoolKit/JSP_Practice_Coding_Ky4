@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>NewFilter_01</filter-name>
+        <filter-class>NewFilter_01</filter-class>
+        <init-param>
+            <param-name>counter</param-name>
+            <param-value>0</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>NewFilter_01</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <listener>
+        <description>HttpSessionListener</description>
+        <listener-class>EventListener.NewServletListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ShowServlet</servlet-name>
+        <servlet-class>Control.ShowServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>showList</servlet-name>
+        <servlet-class>Control.showList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowServlet</servlet-name>
+        <url-pattern>/show</url-pattern>
+    </servlet-mapping>
+    <!--    <listener>
+        <listener-class>
+            EventListener.ContextListener
+        </listener-class>
+    </listener>-->
+    <servlet-mapping>
+        <servlet-name>showList</servlet-name>
+        <url-pattern>/showList</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>HomePage.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
